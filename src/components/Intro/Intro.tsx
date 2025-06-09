@@ -5,15 +5,24 @@ const Intro: React.FC = () => {
   return (
     <section className={styles.intro}>
       <div className={styles.content}>
-        {/* Hero content will go here */}
+        <div className={styles.profilePicture}>
+          {/* Profile picture placeholder */}
+          <img src="/profile-placeholder.jpg" alt="Peter Kim" className={styles.profileImg} />
+        </div>
         <h1 className={styles.title}>
-          {/* Name/title placeholder */}
+          Peter Kim
         </h1>
         <p className={styles.subtitle}>
-          {/* Subtitle/role placeholder */}
+          Frontend Engineer • Harrisonburg, VA
         </p>
         <div className={styles.description}>
-          {/* Brief description placeholder */}
+          <p>
+            Passionate Frontend Engineer with 3 years of experience at Pure Shenandoah, 
+            where I've specialized in creating innovative web solutions and optimizing 
+            development processes. A proud graduate of Turing School of Software & Design, 
+            I thrive on solving complex problems and continuously improving workflows to 
+            deliver exceptional user experiences.
+          </p>
         </div>
         <div className={styles.actions}>
           {/* CTA buttons placeholder */}

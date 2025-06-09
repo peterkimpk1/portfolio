@@ -1,5 +1,5 @@
 import React from 'react';
-import { Project } from '../../types';
+import type { Project } from '../../types';
 import ProjectCard from './ProjectCard';
 import styles from './Projects.module.css';
 
@@ -12,7 +12,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects = [] }) => {
     <section className={styles.projects}>
       <div className={styles.container}>
         <h2 className={styles.title}>
-          {/* Section title placeholder */}
+          Featured Projects
         </h2>
         <div className={styles.grid}>
           {projects.map((project) => (

@@ -6,6 +6,7 @@ export interface Project {
   deployedLink?: string;
   repoLink?: string;
   duration: string;
+  gifUrl?: string;
 }
 
 export interface Skill {

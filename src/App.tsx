@@ -4,6 +4,7 @@ import Layout from './components/Layout/Layout';
 import Intro from './components/Intro/Intro';
 import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
+import { projects } from './data/projects';
 
 const App: React.FC = () => {
   return (
@@ -13,7 +14,7 @@ const App: React.FC = () => {
           <Route path="/" element={
             <>
               <Intro />
-              <Projects />
+              <Projects projects={projects} />
               <Skills />
             </>
           } />
