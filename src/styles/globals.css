@@ -52,15 +52,6 @@ p {
   margin-bottom: var(--spacing-md);
 }
 
-a {
-  color: var(--color-accent);
-  text-decoration: none;
-  transition: opacity var(--transition-fast);
-}
-
-a:hover {
-  opacity: 0.8;
-}
 
 /* Lists */
 ul,

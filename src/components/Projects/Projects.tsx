@@ -21,7 +21,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects = [] }) => {
           {/* Placeholder when no projects */}
           {projects.length === 0 && (
             <div className={styles.placeholder}>
-              {/* Empty state placeholder */}
+              No projects to display yet. Check back soon!
             </div>
           )}
         </div>

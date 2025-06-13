@@ -9,13 +9,38 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <div className={styles.card}>
-      {project.gifUrl && (
-        <div className={styles.gifContainer}>
+      {project.imageUrl && (
+        <div className={styles.imageContainer}>
           <img 
-            src={project.gifUrl} 
-            alt={`${project.title} demo`} 
-            className={styles.projectGif}
+            src={project.imageUrl} 
+            alt={`${project.title} preview`} 
+            className={styles.projectImage}
           />
+          {project.deployedLink && (
+            <a 
+              href={project.deployedLink} 
+              className={styles.arrowButton}
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="View Live Demo"
+            >
+              <svg 
+                width="20" 
+                height="20" 
+                viewBox="0 0 24 24" 
+                fill="none"
+                className={styles.arrow}
+              >
+                <path 
+                  d="M3 12H21M21 12L14 5M21 12L14 19" 
+                  stroke="currentColor" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </a>
+          )}
         </div>
       )}
       <div className={styles.cardHeader}>
@@ -31,11 +56,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         ))}
       </div>
       <div className={styles.cardLinks}>
-        {project.deployedLink && (
-          <a href={project.deployedLink} className={styles.link} target="_blank" rel="noopener noreferrer">
-            Live Demo
-          </a>
-        )}
         {project.repoLink && (
           <a href={project.repoLink} className={styles.link} target="_blank" rel="noopener noreferrer">
             View Code
@@ -46,4 +66,4 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   );
 };
 
-export default ProjectCard;
+export default ProjectCard

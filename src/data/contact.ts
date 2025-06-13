@@ -1,8 +1,7 @@
-import { ContactInfo } from '../types';
+import type { ContactInfo } from '../types';
 
 export const contactInfo: ContactInfo = {
-  // Placeholder contact information - replace with actual details
-  email: 'your.email@example.com',
-  github: 'https://github.com/yourusername',
-  linkedin: 'https://linkedin.com/in/yourprofile'
+  email: 'peterkim.pk1@gmail.com',
+  github: 'https://github.com/peterkimpk1',
+  linkedin: 'https://www.linkedin.com/in/pk-2403fee/'
 };

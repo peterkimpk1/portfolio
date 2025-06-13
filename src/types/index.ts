@@ -6,12 +6,13 @@ export interface Project {
   deployedLink?: string;
   repoLink?: string;
   duration: string;
-  gifUrl?: string;
+  imageUrl?: string;
 }
 
 export interface Skill {
   category: string;
   technologies: string[];
+  icons?: string[];
 }
 
 export interface ContactInfo {

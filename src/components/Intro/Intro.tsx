@@ -6,7 +6,6 @@ const Intro: React.FC = () => {
     <section className={styles.intro}>
       <div className={styles.content}>
         <div className={styles.profilePicture}>
-          {/* Profile picture placeholder */}
           <img src="/profile-placeholder.jpg" alt="Peter Kim" className={styles.profileImg} />
         </div>
         <h1 className={styles.title}>
