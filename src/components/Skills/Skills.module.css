@@ -1,5 +1,9 @@
 .skills {
-  /* Skills section styles */
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
 }
 
 .container {

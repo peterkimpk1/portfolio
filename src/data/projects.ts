@@ -4,30 +4,27 @@ export const projects: Project[] = [
   {
     id: '1',
     title: 'Chatt-r',
-    description: 'A full-featured chat application built with NextJS featuring real-time messaging, user authentication, and responsive design. Implemented secure user sessions and optimized for performance across devices.',
-    techStack: ['NextJS', 'React', 'TypeScript', 'JWT Authentication', 'Pusher.io (Websocket)'],
+    description: 'A full-featured chat application built with NextJS featuring real-time messaging, JWT authentication, and responsive design. Implemented secure user sessions and optimized for performance across devices.',
+    techStack: ['NextJS', 'React', 'TypeScript', 'JWT Auth', 'Pusher.io (Websocket)'],
     deployedLink: 'https://chatt-r.vercel.app',
-    repoLink: 'https://github.com/peterkimpk1/chatt-r',
     duration: '100+ hours',
     imageUrl: '/images/chatt-r-preview.jpg'
   },
   {
     id: '2',
     title: 'Stacks Records',
-    description: 'A full-stack album sharing platform with OAuth integration. Users can discover, share, and discuss music albums with a community-driven approach. Features secure authentication and favoriting records.',
+    description: 'A full-stack vinyl record collection application that allows authenticated users to browse, listen to, add to, and maintain their digital record collections. Features secure authentication and favoriting records.',
     techStack: ['React', 'Express.js','OAuth', 'RESTful API', 'Node.js'],
     deployedLink: 'https://stacks-records.vercel.app',
-    repoLink: 'https://github.com/peterkim/stacks-records',
     duration: '30 hours',
     imageUrl: '/images/stacks-records-preview.jpg'
   },
   {
     id: '3',
     title: 'FruitWise',
-    description: 'A React-based fruit logging application that won the demo competition. Features intuitive UI for tracking fruit consumption, data visualization, and personalized recommendations for healthy eating habits.',
+    description: 'A react application that helps users track and analyze fruit nutrition using the FruityVice API, featuring seasonal fruit displays, comprehensive searching, and personalized nutritional breakdowns. Users can favorite fruits, sort by nutritional values, and log their consumption with customizable serving sizes to monitor their dietary intake.',
     techStack: ['React', 'React Router', 'CSS', 'Data Visualization'],
     deployedLink: 'https://fruitwise.vercel.app',
-    repoLink: 'https://github.com/peterkimpk1/fruitwise',
     duration: '40 hours',
     imageUrl: '/images/fruitwise-preview.jpg'
   },

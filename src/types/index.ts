@@ -4,7 +4,6 @@ export interface Project {
   description: string;
   techStack: string[];
   deployedLink?: string;
-  repoLink?: string;
   duration: string;
   imageUrl?: string;
 }

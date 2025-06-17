@@ -18,12 +18,6 @@ const Projects: React.FC<ProjectsProps> = ({ projects = [] }) => {
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
-          {/* Placeholder when no projects */}
-          {projects.length === 0 && (
-            <div className={styles.placeholder}>
-              No projects to display yet. Check back soon!
-            </div>
-          )}
         </div>
       </div>
     </section>

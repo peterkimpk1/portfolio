@@ -55,13 +55,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           </span>
         ))}
       </div>
-      <div className={styles.cardLinks}>
-        {project.repoLink && (
-          <a href={project.repoLink} className={styles.link} target="_blank" rel="noopener noreferrer">
-            View Code
-          </a>
-        )}
-      </div>
     </div>
   );
 };
