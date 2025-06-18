@@ -4,7 +4,7 @@ import { contactInfo } from '../../data/contact';
 
 const Intro: React.FC = () => {
   return (
-    <section className={styles.intro}>
+    <section id="about" className={styles.intro}>
       <div className={styles.card}>
         <div className={styles.header}>
           <div className={styles.profilePicture}>

@@ -44,7 +44,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         </div>
       )}
       <div className={styles.cardHeader}>
-        <h3 className={styles.cardTitle}>{project.title}</h3>
+        {project.deployedLink ? (
+          <a 
+            href={project.deployedLink} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className={styles.cardTitleLink}
+          >
+            <h3 className={styles.cardTitle}>{project.title}</h3>
+          </a>
+        ) : (
+          <h3 className={styles.cardTitle}>{project.title}</h3>
+        )}
         <span className={styles.duration}>{project.duration}</span>
       </div>
       <p className={styles.cardDescription}>{project.description}</p>

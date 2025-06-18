@@ -1,8 +1,9 @@
 .projects {
   padding: 4rem 2rem;
+  padding-top: calc(4rem + 80px);
   max-width: 1200px;
   margin: 0 auto;
-  min-height: 100dvh;
+  min-height: calc(100dvh - 80px);
   position: relative;
   display: flex;
   align-items: center;
@@ -99,6 +100,11 @@
   font-weight: 600;
   color: #2d3748;
   margin: 0;
+}
+
+.cardTitleLink {
+  text-decoration: none;
+  color: inherit;
 }
 
 .duration {

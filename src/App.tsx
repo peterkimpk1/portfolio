@@ -3,24 +3,33 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
 import Intro from './components/Intro/Intro';
 import Projects from './components/Projects/Projects';
-import Skills from './components/Skills/Skills';
+import Contact from './components/Contact/Contact';
 import { projects } from './data/projects';
+import { useScrollToSection } from './hooks/useScrollToSection';
 
 const App: React.FC = () => {
   return (
     <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={
-            <>
-              <Intro />
-              <Projects projects={projects} />
-              <Skills />
-            </>
-          } />
-        </Routes>
-      </Layout>
+      <AppContent />
     </Router>
+  );
+};
+
+const AppContent: React.FC = () => {
+  useScrollToSection();
+
+  return (
+    <Layout>
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Intro />
+            <Projects projects={projects} />
+            <Contact />
+          </>
+        } />
+      </Routes>
+    </Layout>
   );
 };
 

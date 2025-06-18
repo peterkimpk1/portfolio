@@ -9,7 +9,7 @@ interface ProjectsProps {
 
 const Projects: React.FC<ProjectsProps> = ({ projects = [] }) => {
   return (
-    <section className={styles.projects}>
+    <section id="work" className={styles.projects}>
       <div className={styles.container}>
         <h2 className={styles.title}>
           Featured Projects

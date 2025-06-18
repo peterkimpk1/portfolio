@@ -1,9 +1,10 @@
 .intro {
-  min-height: 100dvh;
+  min-height: calc(100dvh - 80px);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  padding-top: calc(2rem + 80px);
 }
 
 .card {
