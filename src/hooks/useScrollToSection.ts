@@ -18,7 +18,7 @@ export const useScrollToSection = () => {
             top: elementPosition,
             behavior: 'smooth'
           });
-        }, 100);
+        },0);
       }
     }
   }, [location]);
