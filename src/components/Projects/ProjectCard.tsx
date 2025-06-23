@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Project } from '../../types';
+import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 import styles from './Projects.module.css';
 
 interface ProjectCardProps {
@@ -7,8 +8,16 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+  const { elementRef, isVisible } = useScrollAnimation({
+    threshold: 0.2,
+    rootMargin: '-50px'
+  });
+
   return (
-    <div className={styles.card}>
+    <div 
+      ref={elementRef}
+      className={`${styles.card} ${isVisible ? styles.cardVisible : ''}`}
+    >
       {project.imageUrl && (
         <div className={styles.imageContainer}>
           <img 
