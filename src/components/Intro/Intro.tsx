@@ -8,7 +8,7 @@ const Intro: React.FC = () => {
       <div className={styles.card}>
         <div className={styles.header}>
           <div className={styles.profilePicture}>
-            <img src="/profile-placeholder.jpg" alt="Peter Kim" className={styles.profileImg} />
+            <img src="/images/profile-picture.jpeg" alt="Peter Kim" className={styles.profileImg} />
           </div>
           <div className={styles.headerText}>
             <h1 className={styles.title}>

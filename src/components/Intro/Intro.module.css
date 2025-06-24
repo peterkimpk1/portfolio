@@ -5,13 +5,16 @@
   justify-content: center;
   padding: 2rem;
   padding-top: calc(2rem + 80px);
+  background-color: #f8f9fa;
 }
 
 .card {
-  max-width: 800px;
+  max-width: 1000px;
+  min-width: 320px;
+  width: 90%;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 20px;
-  padding: 3rem;
+  padding: 4rem;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -20,7 +23,7 @@
 .header {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
   margin-bottom: 2rem;
 }
 
@@ -29,10 +32,11 @@
 }
 
 .profileImg {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+  width: 200px;
+  height: 250px;
+  border-radius: 20px;
   object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .headerText {
@@ -44,12 +48,17 @@
   font-weight: bold;
   margin-bottom: 0.5rem;
   color: #333;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .subtitle {
   font-size: 1.2rem;
   color: #666;
   margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .description {
@@ -94,4 +103,63 @@
 .icon {
   width: 24px;
   height: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    padding: 2rem;
+    margin: 1rem;
+  }
+  
+  .header {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  .profileImg {
+    width: 200px;
+    height: 240px;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .contactIcons {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 1.5rem;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .profileImg {
+    width: 160px;
+    height: 200px;
+  }
+  
+  .contactIcons {
+    gap: 0.5rem;
+  }
 }
