@@ -20,6 +20,9 @@
 .logo {
   font-weight: 500;
   min-width: 4rem;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .navList {

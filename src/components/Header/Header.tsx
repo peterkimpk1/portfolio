@@ -11,9 +11,13 @@ const Header: React.FC = () => {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        <div className={styles.logo}>
+        <a 
+          href="#about" 
+          className={styles.logo}
+          onClick={() => handleNavClick('about')}
+        >
           Peter K
-        </div>
+        </a>
         <ul className={styles.navList}>
           <li>
             <a 

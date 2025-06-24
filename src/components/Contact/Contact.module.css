@@ -23,7 +23,7 @@
   background: white;
   padding: 40px;
   border-radius: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(139, 92, 246, 0.15) 0px 20px 40px;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -54,7 +54,7 @@
 
 .input:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: #667eea;
 }
 
 .textarea {
@@ -74,11 +74,11 @@
 
 .textarea:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: #667eea;
 }
 
 .submitButton {
-  background-color: #007bff;
+  background-color: #667eea;
   color: white;
   padding: 12px 24px;
   border: none;
@@ -92,7 +92,7 @@
 }
 
 .submitButton:hover {
-  background-color: #0056b3;
+  background-color: #5a67d8;
 }
 
 .submitButton:active {
