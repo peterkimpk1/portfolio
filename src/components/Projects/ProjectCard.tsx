@@ -21,7 +21,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       {project.imageUrl && (
         <div className={styles.imageContainer}>
           <img 
-            src={project.imageUrl} 
+            src={`.${project.imageUrl}`} 
             alt={`${project.title} preview`} 
             className={styles.projectImage}
           />
