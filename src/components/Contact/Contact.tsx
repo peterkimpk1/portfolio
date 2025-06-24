@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import styles from './Contact.module.css';
+import { emailjsConfig } from '../../config/emailjs';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -7,6 +9,8 @@ const Contact: React.FC = () => {
     email: '',
     message: ''
   });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -16,9 +20,30 @@ const Contact: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    console.log('EmailJS Config:', emailjsConfig);
+    setIsSubmitting(true);
+    try {
+      await emailjs.send(
+        emailjsConfig.serviceId,
+        emailjsConfig.templateId,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        emailjsConfig.publicKey
+      );
+
+      alert('Thank you! Your message has been sent successfully.');
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      alert('Sorry, there was an error sending your message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -65,8 +90,12 @@ const Contact: React.FC = () => {
             />
           </div>
           
-          <button type="submit" className={styles.submitButton}>
-            Send
+          <button 
+            type="submit" 
+            className={styles.submitButton}
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? 'Sending...' : 'Send'}
           </button>
         </form>
       </div>
