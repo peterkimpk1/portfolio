@@ -9,7 +9,7 @@ import { useScrollToSection } from './hooks/useScrollToSection';
 
 const App: React.FC = () => {
   return (
-    <Router>
+    <Router basename={import.meta.env.VITE_PROD === 'production' ? '/portfolio' : ''}>
       <AppContent />
     </Router>
   );
@@ -17,7 +17,6 @@ const App: React.FC = () => {
 
 const AppContent: React.FC = () => {
   useScrollToSection();
-
   return (
     <Layout>
       <Routes>
