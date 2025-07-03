@@ -1,12 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useActiveSection } from '../../hooks/useActiveSection';
 import styles from './Header.module.css';
 
 const Header: React.FC = () => {
-  const [activeSection, setActiveSection] = useState<string>('about');
-
-  const handleNavClick = (section: string) => {
-    setActiveSection(section);
-  };
+  const activeSection = useActiveSection();
 
   return (
     <header className={styles.header}>
@@ -14,7 +11,6 @@ const Header: React.FC = () => {
         <a 
           href="#about" 
           className={styles.logo}
-          onClick={() => handleNavClick('about')}
         >
           Peter K
         </a>
@@ -23,7 +19,6 @@ const Header: React.FC = () => {
             <a 
               href="#about" 
               className={`${styles.navLink} ${activeSection === 'about' ? styles.active : ''}`}
-              onClick={() => handleNavClick('about')}
             >
               About
             </a>
@@ -32,7 +27,6 @@ const Header: React.FC = () => {
             <a 
               href="#work" 
               className={`${styles.navLink} ${activeSection === 'work' ? styles.active : ''}`}
-              onClick={() => handleNavClick('work')}
             >
               Work
             </a>
@@ -41,7 +35,6 @@ const Header: React.FC = () => {
             <a 
               href="#contact" 
               className={`${styles.navLink} ${activeSection === 'contact' ? styles.active : ''}`}
-              onClick={() => handleNavClick('contact')}
             >
               Contact
             </a>
