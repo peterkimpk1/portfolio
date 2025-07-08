@@ -50,14 +50,6 @@
 
 @media (max-width: 768px) {
   .backToTop {
-    bottom: 1rem;
-    right: 1rem;
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-  
-  .backToTop svg {
-    width: 1.75rem;
-    height: 1.75rem;
+    display: none;
   }
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
 import styles from './Contact.module.css';
 import { emailjsConfig } from '../../config/emailjs';
 
@@ -36,11 +37,11 @@ const Contact: React.FC = () => {
         emailjsConfig.publicKey
       );
 
-      alert('Thank you! Your message has been sent successfully.');
+      toast.success(`Thanks for reaching out! Your message has been sent and I'll get back to you soon.`);
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
       console.error('EmailJS Error:', error);
-      alert('Sorry, there was an error sending your message. Please try again.');
+      toast.error('Sorry, there was an error sending your message. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -60,6 +61,7 @@ const Contact: React.FC = () => {
               value={formData.name}
               onChange={handleInputChange}
               className={styles.input}
+              placeholder="What's your preferred name?"
               required
             />
           </div>
@@ -73,6 +75,7 @@ const Contact: React.FC = () => {
               value={formData.email}
               onChange={handleInputChange}
               className={styles.input}
+              placeholder="What's the best way to reach you?"
               required
             />
           </div>
@@ -85,6 +88,7 @@ const Contact: React.FC = () => {
               value={formData.message}
               onChange={handleInputChange}
               className={styles.textarea}
+              placeholder='Tell me about your project, question, or how I can help.'
               rows={6}
               required
             />
