@@ -23,7 +23,6 @@ const Contact: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('EmailJS Config:', emailjsConfig);
     setIsSubmitting(true);
     try {
       await emailjs.send(

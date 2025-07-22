@@ -101,8 +101,8 @@
   .navList {
     position: fixed;
     top: 80px;
-    right: -100%;
-    width: 100%;
+    right: -50%;
+    width: 50%;
     height: calc(100vh - 80px);
     background-color: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(10px);
